@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>{{ article.title }}</title>
+{% endblock %}
+
+{% block heading %}
+<h1>{{ article.title }}</h1>
+{% endblock %}
+
+{% block tabs %}
+{% include "blocks/tabs.html" %}
+{% endblock %}
+
+{% block content %}
+<p>{{ article.latest.text.body }}</p>
+<p><strong>{{ article.latest.date }}</strong></p>
+{% endblock %}

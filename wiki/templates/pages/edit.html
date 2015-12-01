@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Edit: {{ article.title }}</title>
+{% endblock %}
+
+{% block heading %}
+<h1>Edit: {{ article.title }}</h1>
+{% endblock %}
+
+{% block tabs %}
+{% include "blocks/tabs.html" %}
+{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    <div id="text-body">{{ text_form }}</div>
+    <div id="revision-info">{{ revision_form }}</div>
+    <input type="submit" value="Submit" />
+</form>
+{% endblock %}

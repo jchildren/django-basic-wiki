@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Revisions: {{ article.title }}</title>
+{% endblock %}
+
+{% block heading %}
+<h1>Revisions: {{ article.title }}</h1>
+{% endblock %}
+
+{% block tabs %}
+{% include "blocks/tabs.html" %}
+{% endblock %}
+
+{% block content %}
+<ul>
+{% for revision in article.revisions.all %}
+    <li>{{ revision.date }} -- {{ revision.user }} -- {{ revision.log }} --
+        <a href="{% url 'wiki:revert' article_id=article.id revision_id=revision.id %}">Revert</a>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}

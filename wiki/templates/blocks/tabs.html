@@ -1,0 +1,5 @@
+<ul class="nav nav-tabs">
+  <li role="utility"><a href="{% url 'wiki:article' article.id %}">Article</a></li>
+  <li role="utility"><a href="{% url 'wiki:edit' article.id %}">Edit</a></li>
+  <li role="utility"><a href="{% url 'wiki:revisions' article.id %}">Revisions</a></li>
+</ul>

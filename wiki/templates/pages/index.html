@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Index</title>
+{% endblock %}
+
+{% block heading %}
+<h1>Index</h1>
+{% endblock %}
+
+{% block content %}
+<ul>
+{% for article in articles_list %}
+    <li>{{ article.title }} -- {{ article.date }} -- {{ article.creator }}
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}
