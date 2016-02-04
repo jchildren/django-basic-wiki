@@ -5,7 +5,7 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 
 class Text(models.Model):
-	body = models.CharField(max_length=5000)
+	body = models.TextField(max_length=5000)
 	
 	def __str__(self):
 		return self.body
